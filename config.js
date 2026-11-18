@@ -39,7 +39,7 @@ window.QN = {
   //   whatsapp: número al que llega el aviso "ya estoy listo" (con 51 delante)
   // Mientras "meet" esté vacío, ese psicólogo aparece como "sala aún no disponible".
   psicologos: [
-    { nombre: "Psicólogo 1", detalle: "Sesiones en línea", meet: "", whatsapp: "51935572175" },
+    { nombre: "Ps. Yina", detalle: "Sesiones en línea", meet: "https://meet.google.com/mvc-gbcx-yfw", whatsapp: "51935572175" },
     { nombre: "Psicólogo 2", detalle: "Sesiones en línea", meet: "", whatsapp: "51931914570" }
   ]
 };
