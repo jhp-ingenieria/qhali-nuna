@@ -14,6 +14,7 @@
     { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
   "shortcuts": [
+    { "name": "Mi sesión en línea", "url": "sesion.html" },
     { "name": "Pedir una cita", "url": "index.html#locales" },
     { "name": "Tests psicológicos", "url": "tests.html" },
     { "name": "Artículos", "url": "blog.html" }

@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mi sesión en línea | Qhali Nuna</title>
+<meta name="description" content="Entra a tu sesión en línea con tu psicólogo de Qhali Nuna por Google Meet.">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e4644">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<header class="header" id="header">
+  <div class="wrap header__bar">
+    <a class="brand" href="index.html" aria-label="Centro Psicológico Qhali Nuna, ir al inicio"><img src="logo-qhali-nuna.jpg" alt="" width="52" height="52"><b><span>Qhali</span> <span>Nuna</span></b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#servicios">Servicios</a><a href="index.html#precios">Precios</a><a href="tests.html">Tests</a><a href="blog.html">Artículos</a><a href="index.html#app">App</a><a href="index.html#preguntas">Preguntas</a>
+    </nav>
+    <div class="header__cta">
+      <a class="btn btn--primary" href="index.html#locales">Pedir una cita</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-menu" id="menu" aria-label="Menú">
+  <a href="index.html">Inicio</a><a href="tests.html">Tests psicológicos</a><a href="blog.html">Artículos</a><a href="index.html#app">Descarga la app</a><a href="index.html#preguntas">Preguntas</a>
+  <a class="btn btn--primary" href="index.html#locales">Pedir una cita</a>
+</nav>
+
+<main id="contenido">
+  <section class="page-hero" style="padding-bottom: 24px">
+    <div class="wrap"><div class="head reveal" style="margin-bottom:0">
+      <span class="tagline">Sesión en línea</span>
+      <h1 style="font-size: clamp(38px, 5vw, 64px)">Entra a tu sesión por Google Meet</h1>
+      <p>Escribe tu nombre, avisa a tu psicólogo que ya estás listo y entra a la sala. Tu psicólogo te dejará pasar en cuanto termine la sesión anterior.</p>
+    </div></div>
+  </section>
+
+  <section class="section" style="padding-top: 24px">
+    <div class="wrap">
+      <div class="session-flow">
+        <!-- Paso 1 -->
+        <div class="card flow-step reveal" id="step-1">
+          <span class="step__num">1</span>
+          <h2>Tus datos</h2>
+          <form id="who" novalidate>
+            <div class="field">
+              <label for="f-name">Tu nombre completo</label>
+              <input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="f-name-err" placeholder="Ejemplo: María Quispe">
+              <p class="field__error" id="f-name-err" hidden>Escribe tu nombre para que tu psicólogo sepa quién eres.</p>
+            </div>
+            <fieldset class="field">
+              <legend>¿Con quién es tu sesión?</legend>
+              <div class="pick" id="f-psy"></div>
+              <p class="field__error" id="f-psy-err" hidden>Elige a tu psicólogo.</p>
+            </fieldset>
+            <div class="field">
+              <label for="f-time">Hora de tu cita <span class="opt">(opcional)</span></label>
+              <input id="f-time" name="time" type="text" autocomplete="off" placeholder="Ejemplo: 4:00 p. m.">
+            </div>
+            <button class="btn btn--primary" type="submit">Continuar
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h11M11 5l5 5-5 5"/></svg></button>
+          </form>
+        </div>
+
+        <!-- Paso 2 -->
+        <div class="card flow-step is-locked" id="step-2" aria-disabled="true">
+          <span class="step__num">2</span>
+          <h2>Antes de entrar</h2>
+          <ul class="ready" id="ready">
+            <li><label><input type="checkbox"> Estoy en un lugar privado, donde nadie me escucha</label></li>
+            <li><label><input type="checkbox"> Tengo audífonos o el volumen bien</label></li>
+            <li><label><input type="checkbox"> Mi internet funciona y mi celular tiene batería</label></li>
+            <li><label><input type="checkbox"> <span>Tengo la app de Google Meet <span class="opt">(en celular)</span></span></label>
+              <span class="stores"><a href="https://play.google.com/store/apps/details?id=com.google.android.apps.tachyon" target="_blank" rel="noopener">Descargar para Android</a> · <a href="https://apps.apple.com/app/google-meet/id1013231476" target="_blank" rel="noopener">Descargar para iPhone</a></span></li>
+          </ul>
+          <p class="hint">Es una guía para tu comodidad: puedes continuar aunque no marques todo.</p>
+        </div>
+
+        <!-- Paso 3 -->
+        <div class="card flow-step is-locked" id="step-3" aria-disabled="true">
+          <span class="step__num">3</span>
+          <h2>Avisa y entra</h2>
+          <p class="hint" id="who-line"></p>
+          <div class="enter-actions">
+            <a class="btn btn--light btn--wa" id="btn-notify" href="#" target="_blank" rel="noopener">
+              <svg class="wa" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2z"/></svg>
+              Avisar que estoy listo</a>
+            <a class="btn btn--primary" id="btn-meet" href="#" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="3"/><path d="M16 10.5l6-3.5v10l-6-3.5"/></svg>
+              Entrar a la sala de Meet</a>
+          </div>
+          <div class="wait-note">
+            <b>Al entrar a Meet:</b>
+            <ol>
+              <li>Si te lo pide, escribe tu nombre <b id="name-echo">tal como lo pusiste aquí</b>.</li>
+              <li>Toca <b>“Solicitar unirse”</b> y espera. Tu psicólogo te dejará pasar.</li>
+              <li>Si en 10 minutos no te admiten, escribe por WhatsApp: puede que la sesión anterior se haya alargado.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="crisis reveal" style="max-width: 760px; margin: 40px auto 0">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg>
+        <div><b>¿Es una emergencia?</b>No esperes tu sesión: llama gratis a la Línea 113, opción 5 (las 24 horas), o al 106 (SAMU).</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="pattern" aria-hidden="true"></div>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__legal" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© 2026 Centro Psicológico Qhali Nuna · “Un alma saludable”</span>
+      <span><a href="index.html">Inicio</a> · <a href="blog.html">Artículos</a> · <a href="index.html#locales">Locales</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var psy = (window.QN && QN.psicologos) || [];
+  var KEY = 'qn-sesion';
+  var saved = {};
+  try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) {}
+
+  var form = document.getElementById('who');
+  var name = document.getElementById('f-name'), time = document.getElementById('f-time');
+  var pick = document.getElementById('f-psy');
+  var s2 = document.getElementById('step-2'), s3 = document.getElementById('step-3');
+  var notify = document.getElementById('btn-notify'), meet = document.getElementById('btn-meet');
+
+  pick.innerHTML = psy.map(function (p, i) {
+    var ok = !!p.meet;
+    return '<label class="pick__item' + (ok ? '' : ' is-off') + '"><input type="radio" name="psy" value="' + i + '"' + (ok ? '' : ' disabled') + '>' +
+      '<span><b>' + p.nombre + '</b><small>' + (ok ? p.detalle : 'Sala aún no disponible') + '</small></span></label>';
+  }).join('');
+
+  if (saved.name) name.value = saved.name;
+  if (saved.time) time.value = saved.time;
+  var r = pick.querySelector('input[value="' + saved.psy + '"]:not([disabled])');
+  if (r) r.checked = true;
+  else { var only = pick.querySelectorAll('input:not([disabled])'); if (only.length === 1) only[0].checked = true; }
+
+  function unlock(el) { el.classList.remove('is-locked'); el.removeAttribute('aria-disabled'); }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var n = name.value.trim(), sel = pick.querySelector('input:checked'), bad = 0;
+    document.getElementById('f-name-err').hidden = !!n; name.setAttribute('aria-invalid', !n); if (!n) bad++;
+    document.getElementById('f-psy-err').hidden = !!sel; if (!sel) bad++;
+    if (bad) { (n ? pick.querySelector('input:not([disabled])') : name).focus(); return; }
+
+    var p = psy[+sel.value], t = time.value.trim().replace(/\.+$/, '');
+    try { localStorage.setItem(KEY, JSON.stringify({ name: n, psy: sel.value, time: t })); } catch (err) {}
+
+    var msg = 'Hola, soy ' + n + '. Ya estoy listo(a) para mi sesión en línea con ' + p.nombre + (t ? ' de las ' + t : '') + '. Voy a entrar a la sala de Meet.';
+    notify.href = 'https://wa.me/' + p.whatsapp + '?text=' + encodeURIComponent(msg);
+    meet.href = p.meet;
+    document.getElementById('who-line').innerHTML = 'Vas a entrar como <b>' + n.replace(/</g, '&lt;') + '</b> a la sala de <b>' + p.nombre + '</b>.';
+    document.getElementById('name-echo').textContent = n;
+    unlock(s2); unlock(s3);
+    s2.classList.add('is-in'); s3.classList.add('is-in');
+    s3.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+
+  notify.addEventListener('click', function () { notify.classList.add('is-done'); notify.lastChild.textContent = ' Aviso enviado'; });
+  [s2, s3].forEach(function (s) { s.addEventListener('click', function (e) { if (s.classList.contains('is-locked')) { e.preventDefault(); name.focus(); } }, true); });
+})();
+</script>
+<script src="main.js"></script>
+</body>
+</html>
