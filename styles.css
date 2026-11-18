@@ -624,3 +624,18 @@ p { margin: 0; }
   .flow-step { padding: 40px 20px 24px; }
   .pick, .enter-actions { grid-template-columns: 1fr; }
 }
+
+/* ---------- servicios: 12 tarjetas con filtro ---------- */
+.svc-filter { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin: -24px auto 48px; }
+.svc-filter__btn { border: 1.5px solid var(--line); background: #fff; color: var(--ink); border-radius: 999px; padding: 10px 18px; font: 600 15px/1 var(--font-text); cursor: pointer; transition: background .25s, color .25s, transform .25s var(--ease); }
+.svc-filter__btn:hover { transform: translateY(-2px); }
+.svc-filter__btn.is-on { background: var(--ink); color: #fff; }
+.services--grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px 24px; }
+.services--grid .service { padding: 38px 28px 28px; }
+.services--grid .service h3 { font-size: 24px; }
+.services .service .service__icon.ic-teal { background: var(--teal); color: #fff; }
+.services .service .service__icon.ic-pink { background: var(--pink); color: #fff; }
+.services .service .service__icon.ic-peach { background: var(--peach); color: var(--ink); }
+.service.is-hidden { display: none; }
+@media (max-width: 1080px) { .services--grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 680px) { .services--grid { grid-template-columns: 1fr; gap: 40px; } .svc-filter { margin-top: -12px; justify-content: flex-start; flex-wrap: nowrap; overflow-x: auto; padding-bottom: 6px; } .svc-filter__btn { white-space: nowrap; } }

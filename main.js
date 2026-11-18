@@ -130,3 +130,21 @@
         : 'La instalación funciona cuando la página esté publicada en internet. Por ahora puedes usar la app aquí mismo.';
   }));
 })();
+
+/* filtro de servicios */
+(() => {
+  const btns = document.querySelectorAll('.svc-filter__btn'); if (!btns.length) return;
+  btns.forEach(b => b.addEventListener('click', () => {
+    btns.forEach(x => { x.classList.toggle('is-on', x === b); x.setAttribute('aria-pressed', x === b); });
+    document.querySelectorAll('.services--grid .service').forEach(s => {
+      const show = b.dataset.filter === 'todos' || s.dataset.group === b.dataset.filter;
+      s.classList.toggle('is-hidden', !show); if (show) s.classList.add('is-in');
+    });
+  }));
+})();
+
+/* "Mi sesión en línea" solo aparece cuando hay al menos una sala de Meet configurada */
+(() => {
+  const ok = ((window.QN || {}).psicologos || []).some(p => p.meet);
+  if (!ok) document.querySelectorAll('[data-meet-link]').forEach(el => { el.hidden = true; el.style.display = 'none'; });
+})();
