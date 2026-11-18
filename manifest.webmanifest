@@ -1,0 +1,21 @@
+{
+  "name": "Qhali Nuna · Centro Psicológico",
+  "short_name": "Qhali Nuna",
+  "description": "Pide tu cita, haz tests psicológicos y lee artículos de salud mental. Espinar, Sicuani y en línea.",
+  "lang": "es-PE",
+  "start_url": "app.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fcf7ec",
+  "theme_color": "#0e4644",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Pedir una cita", "url": "index.html#locales" },
+    { "name": "Tests psicológicos", "url": "tests.html" },
+    { "name": "Artículos", "url": "blog.html" }
+  ]
+}

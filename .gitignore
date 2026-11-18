@@ -1,0 +1,15 @@
+# Solo se publica la página
+.taste-skill/
+shots/
+index-v1.html
+index-v2.html
+assets/*
+!assets/img/
+assets/img/*
+!assets/img/photo-f170147564-960.jpg
+!assets/img/photo-f170147564-1280.jpg
+!assets/img/photo-f4362034-960.jpg
+!assets/img/photo-f4362034-1280.jpg
+!assets/img/photo-f82529735-500.jpg
+!assets/img/photo-f82529735-960.jpg
+!assets/img/photo-f51280532-500.jpg

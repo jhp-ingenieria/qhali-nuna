@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Artículos de salud mental | Qhali Nuna</title>
+<meta name="description" content="Artículos sobre ansiedad, duelo, terapia en línea, niños y adolescentes, y cómo elegir el tipo de terapia.">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0e4644">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+<script src="articulos.js"></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<header class="header" id="header">
+  <div class="wrap header__bar">
+    <a class="brand" href="index.html" aria-label="Centro Psicológico Qhali Nuna, ir al inicio"><img src="logo-qhali-nuna.jpg" alt="" width="52" height="52"><b><span>Qhali</span> <span>Nuna</span></b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#servicios">Servicios</a><a href="index.html#precios">Precios</a><a href="tests.html">Tests</a><a href="blog.html" aria-current="page">Artículos</a><a href="index.html#app">App</a><a href="index.html#preguntas">Preguntas</a>
+    </nav>
+    <div class="header__cta">
+      <a class="btn btn--primary" href="index.html#locales">Pedir una cita</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-menu" id="menu" aria-label="Menú">
+  <a href="index.html">Inicio</a><a href="tests.html">Tests psicológicos</a><a href="blog.html">Artículos</a><a href="index.html#app">Descarga la app</a><a href="index.html#preguntas">Preguntas</a>
+  <a class="btn btn--primary" href="index.html#locales">Pedir una cita</a>
+</nav>
+
+<main id="contenido">
+  <section class="page-hero"><div class="wrap"><div class="head reveal">
+    <span class="tagline tagline--peach">Nuestro blog</span>
+    <h1 style="font-size: clamp(40px, 5.4vw, 72px)">La salud mental, bien explicada</h1>
+    <p>Artículos escritos por el equipo de Qhali Nuna para entender lo que sientes, acompañar a tu familia y saber cuándo pedir ayuda.</p>
+  </div></div></section>
+  <section class="section" style="padding-top: 24px"><div class="wrap"><div class="posts" id="posts"></div></div></section>
+</main>
+
+<div class="pattern" aria-hidden="true"></div>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__legal" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© 2026 Centro Psicológico Qhali Nuna · “Un alma saludable”</span>
+      <span><a href="index.html">Inicio</a> · <a href="blog.html">Artículos</a> · <a href="index.html#locales">Locales</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>(function(){function card(a,i){return '<a class="card post reveal" data-delay="'+(i%3)+'" href="articulo.html?a='+a.slug+'"><span class="post__cover '+a.color+'">'+(QN_ICONS[a.icono]||'')+'</span><span class="post__body"><span class="post__tag">'+a.tag+' · '+a.minutos+' min</span><h3>'+a.titulo+'</h3><p>'+a.resumen+'</p><span class="btn btn--light">Lee el artículo</span></span></a>';}document.getElementById("posts").innerHTML=QN_ARTICULOS.map(card).join("");})();</script>
+<script src="main.js"></script>
+</body>
+</html>

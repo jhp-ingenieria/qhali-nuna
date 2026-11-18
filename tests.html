@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tests psicológicos gratuitos | Qhali Nuna</title>
+<meta name="description" content="Diez tests psicológicos gratuitos con resultado inmediato: ansiedad, depresión, insomnio, estrés postraumático, alcohol, internet, depresión posparto, burnout, autoestima y ansiedad social.">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0e4644">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+<script src="tests-data.js"></script>
+<script src="articulos.js"></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<header class="header" id="header">
+  <div class="wrap header__bar">
+    <a class="brand" href="index.html" aria-label="Centro Psicológico Qhali Nuna, ir al inicio"><img src="logo-qhali-nuna.jpg" alt="" width="52" height="52"><b><span>Qhali</span> <span>Nuna</span></b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#servicios">Servicios</a><a href="index.html#precios">Precios</a><a href="tests.html" aria-current="page">Tests</a><a href="blog.html">Artículos</a><a href="index.html#app">App</a><a href="index.html#preguntas">Preguntas</a>
+    </nav>
+    <div class="header__cta">
+      <a class="btn btn--primary" href="index.html#locales">Pedir una cita</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-menu" id="menu" aria-label="Menú">
+  <a href="index.html">Inicio</a><a href="tests.html">Tests psicológicos</a><a href="blog.html">Artículos</a><a href="index.html#app">Descarga la app</a><a href="index.html#preguntas">Preguntas</a>
+  <a class="btn btn--primary" href="index.html#locales">Pedir una cita</a>
+</nav>
+
+<main id="contenido">
+  <section class="page-hero" style="padding-bottom: 56px">
+    <div class="wrap"><div class="head reveal" style="margin-bottom:0">
+      <span class="tagline tagline--peach">Autoevaluación gratuita</span>
+      <h1 style="font-size: clamp(40px, 5.4vw, 72px)">Tests psicológicos</h1>
+      <p>Diez tests para conocer mejor cómo te sientes. Son gratuitos, anónimos y te dan un resultado al momento. Tus respuestas no se guardan ni se envían a nadie.</p>
+    </div></div>
+  </section>
+  <section class="tests-band" aria-label="Lista de tests">
+    <div class="wrap"><div class="test-list" id="test-list"></div></div>
+  </section>
+  <section class="section" style="padding-top: 72px">
+    <div class="wrap">
+      <div class="crisis reveal" style="max-width: 860px; margin: 0 auto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg>
+        <div><b>¿Necesitas ayuda ahora mismo?</b>Si piensas en hacerte daño, llama gratis a la Línea 113, opción 5 (Ministerio de Salud, las 24 horas), o al 106 (SAMU) en una emergencia.</div>
+      </div>
+      <p class="disclaimer reveal" style="max-width: 860px; margin: 20px auto 0">Los tests son herramientas de orientación. <strong>No reemplazan una evaluación profesional ni dan un diagnóstico.</strong> Si tu resultado te preocupa, conversa con un psicólogo: tu primera sesión en Qhali Nuna es gratis.</p>
+    </div>
+  </section></main>
+
+<div class="pattern" aria-hidden="true"></div>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__legal" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© 2026 Centro Psicológico Qhali Nuna · “Un alma saludable”</span>
+      <span><a href="index.html">Inicio</a> · <a href="blog.html">Artículos</a> · <a href="index.html#locales">Locales</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('test-list').innerHTML = QN_TESTS.map(function(t,i){
+    return '<a class="test-item reveal" data-delay="'+(i%2)+'" href="test.html?t='+t.slug+'">'+qnIllu(t)+'<span><h3>'+t.titulo+'</h3><small>'+t.preguntas.length+' preguntas · '+Math.max(1,Math.round(t.preguntas.length/3.5))+' min</small></span><span class="go"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></span></a>';
+  }).join('');
+})();
+</script>
+<script src="main.js"></script>
+</body>
+</html>

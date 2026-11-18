@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Test | Qhali Nuna</title>
+<meta name="description" content="Test psicológico gratuito con resultado inmediato.">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#0e4644">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="config.js"></script>
+<script src="tests-data.js"></script>
+<script src="articulos.js"></script>
+</head>
+<body>
+<a class="skip" href="#contenido">Ir al contenido</a>
+<header class="header" id="header">
+  <div class="wrap header__bar">
+    <a class="brand" href="index.html" aria-label="Centro Psicológico Qhali Nuna, ir al inicio"><img src="logo-qhali-nuna.jpg" alt="" width="52" height="52"><b><span>Qhali</span> <span>Nuna</span></b></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html#servicios">Servicios</a><a href="index.html#precios">Precios</a><a href="tests.html" aria-current="page">Tests</a><a href="blog.html">Artículos</a><a href="index.html#app">App</a><a href="index.html#preguntas">Preguntas</a>
+    </nav>
+    <div class="header__cta">
+      <a class="btn btn--primary" href="index.html#locales">Pedir una cita</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú"><span></span></button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-menu" id="menu" aria-label="Menú">
+  <a href="index.html">Inicio</a><a href="tests.html">Tests psicológicos</a><a href="blog.html">Artículos</a><a href="index.html#app">Descarga la app</a><a href="index.html#preguntas">Preguntas</a>
+  <a class="btn btn--primary" href="index.html#locales">Pedir una cita</a>
+</nav>
+
+<main id="contenido">
+  <section class="test-hero">
+    <div class="wrap test-hero__grid">
+      <div class="test-hero__text">
+        <p class="crumbs" style="margin:0"><a href="tests.html" style="color:#bfe8e3">← Todos los tests</a></p>
+        <span class="tagline tagline--peach">Toma conciencia de tu bienestar</span>
+        <h1 id="t-title">Test</h1>
+        <p id="t-intro"></p>
+        <div class="service__where" id="t-meta"></div>
+        <button class="btn btn--white" type="button" data-open-quiz>Haz el test <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="test-hero__art" id="t-art"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap info-grid">
+      <div class="intro reveal">
+        <span class="tagline">Lo que debes saber</span>
+        <h2 id="t-faq-h">Preguntas sobre el test</h2>
+        <p style="font-size:18px;color:var(--ink-soft)">Toma pocos minutos y te da un resultado inmediato. Al final te decimos qué significa y qué puedes hacer.</p>
+        <button class="btn btn--primary" type="button" data-open-quiz>Haz el test <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="faq reveal" data-delay="1" id="t-faq"></div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0">
+    <div class="wrap">
+      <div class="cta-box reveal">
+        <span class="cta-box__blob" aria-hidden="true"><svg viewBox="0 0 300 500" preserveAspectRatio="none"><path fill="currentColor" d="M300 0H175c-40 30-30 90 10 120-70 0-110 60-85 120 15 30 45 45 60 50-80 20-120 90-90 150 10 25 25 45 40 60h190z"/></svg></span>
+        <h2>Tu primera sesión es gratis</h2>
+        <p>Si tu resultado te deja dudas, conversa con uno de nuestros psicólogos. La primera sesión no tiene costo, en Espinar, en Sicuani o en línea.</p>
+        <a class="btn btn--primary" href="index.html#locales">Pedir mi sesión gratis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top: 0">
+    <div class="wrap">
+      <div class="head reveal" style="margin-bottom: 48px"><span class="tagline tagline--pink">Da el primer paso</span><h2>Otros tests psicológicos</h2></div>
+      <div class="test-list" id="t-others" style="max-width:none"></div>
+    </div>
+  </section>
+
+  <div class="quiz-overlay" id="quiz-overlay" role="dialog" aria-modal="true" aria-labelledby="quiz-name">
+    <div class="quiz-overlay__bar">
+      <a class="brand" href="index.html"><img src="logo-qhali-nuna.jpg" alt="" width="40" height="40"><b><span>Qhali</span> <span>Nuna</span></b></a>
+      <button class="btn btn--light" type="button" data-close-quiz>Cerrar</button>
+    </div>
+    <div class="wrap"><div class="quiz"><div class="card quiz__panel" id="quiz-panel"></div></div></div>
+  </div></main>
+
+<div class="pattern" aria-hidden="true"></div>
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__legal" style="margin-top:0;border-top:0;padding-top:0">
+      <span>© 2026 Centro Psicológico Qhali Nuna · “Un alma saludable”</span>
+      <span><a href="index.html">Inicio</a> · <a href="blog.html">Artículos</a> · <a href="index.html#locales">Locales</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var slug = new URLSearchParams(location.search).get('t');
+  var t = QN_TESTS.find(function(x){ return x.slug === slug; }) || QN_TESTS[0];
+  var min = Math.max(1, Math.round(t.preguntas.length / 3.5));
+  document.title = t.titulo + ': online, gratis y con resultado inmediato | Qhali Nuna';
+  var md = document.querySelector('meta[name=description]'); if (md) md.content = t.resumen;
+  document.getElementById('t-title').textContent = t.titulo;
+  document.getElementById('t-intro').textContent = 'Haz el ' + t.titulo.toLowerCase() + ' de forma gratuita y con un resultado inmediato. ' + t.resumen;
+  document.getElementById('t-meta').innerHTML = '<span class="chip">' + t.preguntas.length + ' preguntas</span><span class="chip">' + min + ' min</span><span class="chip">Gratis y anónimo</span>';
+  document.getElementById('t-art').innerHTML = qnIllu(t);
+  document.getElementById('t-faq-h').textContent = t.titulo + ': lo que debes saber';
+  var validado = t.instrumento.indexOf('Qhali Nuna') === -1;
+  var tema = t.titulo.replace(/^Test de /, '');
+  var art = (window.QN_ARTICULOS || []).find(function(a){ return a.slug === t.info.articulo; });
+  var faqs = [
+    ['¿Qué es ' + ({ ansiedad: 'la ansiedad', depresion: 'la depresión', insomnio: 'el insomnio', 'estres-postraumatico': 'el estrés postraumático', alcoholismo: 'el consumo problemático de alcohol', 'adiccion-a-internet': 'la adicción a internet', 'depresion-posparto': 'la depresión posparto', burnout: 'el burnout', autoestima: 'la autoestima', 'ansiedad-social': 'la ansiedad social' }[t.slug] || tema) + '?', t.info.que],
+    ['¿Qué señales pueden indicar un problema?', t.info.senales],
+    ['¿En qué se basa este test?', validado
+      ? 'Usamos el ' + t.instrumento + ', de ' + t.autor + ', una herramienta de cribado reconocida por la comunidad científica internacional y de uso libre. Te la presentamos en español, adaptada para el Perú.'
+      : 'Es un ' + t.instrumento.toLowerCase() + '. Lo preparó el ' + t.autor.charAt(0).toLowerCase() + t.autor.slice(1) + '. Sirve para orientarte, no es una escala clínica validada.'],
+    ['¿Cómo funciona y cuánto tiempo toma?', 'Son ' + t.preguntas.length + ' preguntas. ' + t.consigna + ' Elige la respuesta que mejor te describa. Toma unos ' + min + ' minutos y ves tu resultado al terminar.'],
+    ['¿El resultado es un diagnóstico?', 'No. Este test no tiene valor diagnóstico y no reemplaza la evaluación de un profesional. Te ayuda a tomar conciencia de cómo estás y a decidir si te conviene consultar.'],
+    ['¿Se guardan mis respuestas?', 'No. El test funciona en tu celular o computadora: tus respuestas no se guardan ni se envían a nadie.'],
+    ['¿Qué puedo hacer si el resultado me preocupa?', 'Conversa con un psicólogo para entender tu resultado y ver si necesitas acompañamiento. En Qhali Nuna la primera sesión es gratis, en Espinar, en Sicuani o en línea.' + (art ? ' También puedes leer <a href="articulo.html?a=' + art.slug + '">' + art.titulo + '</a>.' : '')]
+  ];
+  var plus = '<span class="plus" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span>';
+  document.getElementById('t-faq').innerHTML = faqs.map(function(f){ return '<details><summary>' + f[0] + plus + '</summary><div class="answer"><p>' + f[1] + '</p></div></details>'; }).join('');
+  var arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
+  document.getElementById('t-others').innerHTML = QN_TESTS.filter(function(x){ return x !== t; }).slice(0, 4).map(function(o, i){
+    return '<a class="test-item reveal" data-delay="' + (i % 2) + '" href="test.html?t=' + o.slug + '" style="border:1.5px solid var(--line);box-shadow:var(--shadow)">' + qnIllu(o) + '<span><h3>' + o.titulo + '</h3><small>' + o.preguntas.length + ' preguntas</small></span><span class="go">' + arrow + '</span></a>';
+  }).join('');
+
+  /* ---------- quiz ---------- */
+  var overlay = document.getElementById('quiz-overlay'), panel = document.getElementById('quiz-panel');
+  var i = 0, answers = [];
+  function open(){ i = 0; answers = []; overlay.classList.add('is-open'); document.body.style.overflow = 'hidden'; render(); }
+  function close(){ overlay.classList.remove('is-open'); document.body.style.overflow = ''; }
+  function render(){
+    var p = t.preguntas[i], pct = Math.round(i / t.preguntas.length * 100);
+    panel.innerHTML =
+      '<div class="quiz__top"><b id="quiz-name" style="font:700 22px/1.2 var(--font-head)">' + t.titulo + '</b><span class="quiz__count">' + (i + 1) + ' de ' + t.preguntas.length + '</span></div>' +
+      '<div class="quiz__progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><span style="width:' + pct + '%"></span></div>' +
+      '<p class="quiz__intro">' + t.consigna + '</p>' +
+      '<h2 class="quiz__q swap" tabindex="-1">' + p.texto + '</h2>' +
+      '<div class="quiz__opts" role="radiogroup">' + p.opciones.map(function(o, k){
+        return '<button type="button" class="quiz__opt' + (answers[i] === k ? ' is-picked' : '') + '" role="radio" aria-checked="' + (answers[i] === k) + '" data-k="' + k + '"><b></b>' + o[0] + '</button>';
+      }).join('') + '</div>' +
+      '<div class="quiz__nav"><button type="button" class="btn btn--light" data-back' + (i ? '' : ' style="visibility:hidden"') + '>Anterior</button></div>';
+    panel.querySelector('.quiz__q').focus({ preventScroll: true });
+    overlay.scrollTop = 0;
+  }
+  function result(){
+    var pts = t.preguntas.map(function(p, n){ return p.opciones[answers[n]][1]; });
+    var sum = pts.reduce(function(a, b){ return a + b; }, 0);
+    var score = t.promedio ? Math.round(sum / pts.length) : sum;
+    var r = t.rangos.find(function(x){ return score <= x[0]; }) || t.rangos[t.rangos.length - 1];
+    var risk = t.preguntas.some(function(p, n){ return p.alerta && p.opciones[answers[n]][1] > 0; });
+    var level = t.rangos.indexOf(r), bars = '';
+    for (var b = 0; b < t.rangos.length; b++) bars += '<span class="' + (b <= level ? 'on' : '') + '"></span>';
+    if (t.slug === 'autoestima') { bars = ''; for (var c = 0; c < t.rangos.length; c++) bars += '<span class="' + (c >= level ? 'on' : '') + '"></span>'; }
+    panel.innerHTML =
+      '<div class="quiz__result">' +
+      '<div class="score"><div class="score__ring" style="--p:' + Math.round(score / t.maximo * 100) + '"><span>' + score + '</span></div>' +
+      '<div><small>' + t.titulo + ' · ' + score + ' de ' + t.maximo + (t.promedio ? ' (promedio)' : ' puntos') + '</small><h3 tabindex="-1">' + r[1] + '</h3></div></div>' +
+      '<div class="scale" aria-hidden="true">' + bars + '</div>' +
+      '<p class="result-band ' + r[3] + '">' + r[2] + '</p>' +
+      (risk ? '<div class="crisis" style="border-color:var(--pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><div><b>Gracias por tu sinceridad.</b>Contaste que has pensado en hacerte daño. No estás solo: habla hoy con alguien. Llama gratis a la <b style="display:inline">Línea 113, opción 5</b> (las 24 horas) o al <b style="display:inline">106</b> si estás en peligro. También puedes escribirnos.</div></div>' : '') +
+      '<p class="disclaimer">Este resultado es una orientación y no un diagnóstico. Basado en: ' + t.instrumento + '.</p>' +
+      '<div class="cta-box" style="padding:28px;box-shadow:none"><h2 style="font-size:26px">Tu primera sesión es gratis</h2><p style="font-size:16px">Conversa con un psicólogo sobre tu resultado, en Espinar, en Sicuani o en línea.</p>' +
+      '<div class="result-actions"><a class="btn btn--primary" data-wa="espinar" href="#">Escribir a Espinar</a><a class="btn btn--primary" data-wa="sicuani" href="#">Escribir a Sicuani</a></div></div>' +
+      '<div class="result-actions"><button type="button" class="btn btn--light" data-again>Repetir el test</button><a class="btn btn--light" href="tests.html">Ver otros tests</a></div>' +
+      '</div>';
+    panel.querySelectorAll('[data-wa]').forEach(function(a){
+      a.href = window.qnWa(a.dataset.wa, 'Hola, hice el ' + t.titulo.toLowerCase() + ' en su página y quisiera mi primera sesión gratis');
+      a.target = '_blank'; a.rel = 'noopener';
+    });
+    panel.querySelector('h3').focus({ preventScroll: true });
+    overlay.scrollTop = 0;
+  }
+  document.addEventListener('click', function(e){
+    if (e.target.closest('[data-open-quiz]')) return open();
+    if (e.target.closest('[data-close-quiz]')) return close();
+    if (!overlay.classList.contains('is-open')) return;
+    var o = e.target.closest('.quiz__opt');
+    if (o) {
+      answers[i] = +o.dataset.k;
+      panel.querySelectorAll('.quiz__opt').forEach(function(b){ b.classList.toggle('is-picked', b === o); b.setAttribute('aria-checked', b === o); });
+      setTimeout(function(){ i++; if (i < t.preguntas.length) render(); else result(); }, 260);
+      return;
+    }
+    if (e.target.closest('[data-back]')) { i = Math.max(0, i - 1); render(); return; }
+    if (e.target.closest('[data-again]')) open();
+  });
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && overlay.classList.contains('is-open')) close(); });
+  if (location.hash === '#empezar') setTimeout(open, 300);
+})();
+</script>
+<script src="main.js"></script>
+</body>
+</html>
