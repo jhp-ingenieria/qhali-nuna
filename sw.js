@@ -1,6 +1,6 @@
 /* Qhali Nuna: hace que la app se pueda instalar y abrir aunque la señal sea débil.
    Siempre intenta traer la versión más nueva de internet; si no hay conexión, usa la guardada. */
-const CACHE = 'qhali-nuna-v9';
+const CACHE = 'qhali-nuna-v10';
 const CORE = [
   './', 'index.html', 'app.html', 'tests.html', 'blog.html', 'articulo.html', 'test.html', 'sesion.html', 'tests-data.js',
   'styles.css', 'main.js', 'config.js', 'articulos.js', 'logo-qhali-nuna.jpg',
@@ -19,7 +19,7 @@ self.addEventListener('fetch', e => {
   const req = e.request;
   if (req.method !== 'GET' || new URL(req.url).origin !== location.origin) return;
   e.respondWith(
-    fetch(req).then(res => {
+    fetch(req.url, { cache: 'no-cache', credentials: 'same-origin' }).then(res => {
       const copy = res.clone();
       caches.open(CACHE).then(c => c.put(req, copy));
       return res;
