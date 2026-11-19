@@ -53,7 +53,7 @@
   </div>
 </footer>
 
-<script>(function(){function card(a,i){return '<a class="card post reveal" data-delay="'+(i%3)+'" href="articulo.html?a='+a.slug+'"><span class="post__cover '+a.color+'">'+(QN_ICONS[a.icono]||'')+'</span><span class="post__body"><span class="post__tag">'+a.tag+' · '+a.minutos+' min</span><h3>'+a.titulo+'</h3><p>'+a.resumen+'</p><span class="btn btn--light">Lee el artículo</span></span></a>';}document.getElementById("posts").innerHTML=QN_ARTICULOS.map(card).join("");})();</script>
+<script>(function(){function card(a,i){return '<a class="card post reveal" data-delay="'+(i%3)+'" href="articulo.html?a='+a.slug+'"><span class="post__cover '+a.color+'">'+qnCover(a)+'</span><span class="post__body"><span class="post__tag">'+a.tag+' · '+a.minutos+' min</span><h3>'+a.titulo+'</h3><p>'+a.resumen+'</p><span class="btn btn--light">Lee el artículo</span></span></a>';}document.getElementById("posts").innerHTML=QN_ARTICULOS.map(card).join("");})();</script>
 <script src="main.js"></script>
 </body>
 </html>

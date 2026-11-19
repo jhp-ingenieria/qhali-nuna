@@ -13,6 +13,7 @@ window.QN_ICONS = {
 window.QN_ARTICULOS = [
   {
     slug: "psicologo-o-psiquiatra",
+    foto: "art-psicologo.jpg", fotoAlt: "Una psicóloga escucha a una paciente en su consultorio",
     titulo: "¿Psicólogo o psiquiatra? Diferencias y a quién acudir",
     tag: "Primeros pasos",
     icono: "brain", color: "c-teal", minutos: 4,
@@ -34,6 +35,7 @@ window.QN_ARTICULOS = [
   },
   {
     slug: "ansiedad-senales",
+    foto: "art-ansiedad.jpg", fotoAlt: "Un hombre preocupado, sentado en un sillón, con la mano en la frente",
     titulo: "Ansiedad: señales frecuentes y qué puedes hacer hoy",
     tag: "Ansiedad",
     icono: "wave", color: "c-pink", minutos: 5,
@@ -61,6 +63,7 @@ window.QN_ARTICULOS = [
   },
   {
     slug: "mi-hijo-necesita-psicologo",
+    foto: "art-ninos.jpg", fotoAlt: "Una psicóloga conversa con una adolescente",
     titulo: "¿Cómo saber si mi hijo o hija necesita ir al psicólogo?",
     tag: "Niños y adolescentes",
     icono: "child", color: "c-peach", minutos: 5,
@@ -85,6 +88,7 @@ window.QN_ARTICULOS = [
   },
   {
     slug: "terapia-en-linea",
+    foto: "art-linea.jpg", fotoAlt: "Una persona en una sesión por videollamada desde su laptop",
     titulo: "Terapia en línea: cómo prepararte para tu primera sesión",
     tag: "Terapia en línea",
     icono: "laptop", color: "c-teal", minutos: 4,
@@ -108,6 +112,7 @@ window.QN_ARTICULOS = [
   },
   {
     slug: "tipos-de-terapia",
+    foto: "art-tipos.jpg", fotoAlt: "Una familia caminando de la mano al atardecer",
     titulo: "Terapia individual, de pareja o familiar: ¿cuál necesito?",
     tag: "Tipos de terapia",
     icono: "people", color: "c-pink", minutos: 4,
@@ -127,6 +132,7 @@ window.QN_ARTICULOS = [
   },
   {
     slug: "duelo",
+    foto: "art-duelo.jpg", fotoAlt: "Dos personas se toman de las manos para consolarse",
     titulo: "Duelo: cómo atravesar la pérdida de un ser querido",
     tag: "Duelo",
     icono: "leaf", color: "c-peach", minutos: 5,
@@ -148,3 +154,9 @@ window.QN_ARTICULOS = [
 <p>Si tienes pensamientos de hacerte daño, busca ayuda de inmediato: llama a la <strong>Línea 113, opción 5</strong>, del Ministerio de Salud, o al <strong>106</strong> (SAMU) en una emergencia.</p>`
   }
 ];
+
+/* portada de cada artículo: foto referencial con el ícono encima */
+window.qnCover = function (a) {
+  var ic = (window.QN_ICONS || {})[a.icono] || '';
+  return a.foto ? '<img class="cover__img" src="assets/img/' + a.foto + '" alt="' + (a.fotoAlt || '') + '" loading="lazy" decoding="async"><i class="cover__icon">' + ic + '</i>' : ic;
+};

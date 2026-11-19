@@ -56,11 +56,11 @@
   </div>
 </footer>
 
-<script>(function(){function card(a,i){return '<a class="card post reveal" data-delay="'+(i%3)+'" href="articulo.html?a='+a.slug+'"><span class="post__cover '+a.color+'">'+(QN_ICONS[a.icono]||'')+'</span><span class="post__body"><span class="post__tag">'+a.tag+' · '+a.minutos+' min</span><h3>'+a.titulo+'</h3><p>'+a.resumen+'</p><span class="btn btn--light">Lee el artículo</span></span></a>';}
+<script>(function(){function card(a,i){return '<a class="card post reveal" data-delay="'+(i%3)+'" href="articulo.html?a='+a.slug+'"><span class="post__cover '+a.color+'">'+qnCover(a)+'</span><span class="post__body"><span class="post__tag">'+a.tag+' · '+a.minutos+' min</span><h3>'+a.titulo+'</h3><p>'+a.resumen+'</p><span class="btn btn--light">Lee el artículo</span></span></a>';}
 var q=new URLSearchParams(location.search).get('a');var a=QN_ARTICULOS.find(function(x){return x.slug===q;})||QN_ARTICULOS[0];
 document.title=a.titulo+' | Qhali Nuna';var md=document.querySelector('meta[name=description]');if(md)md.content=a.resumen;
 var el=document.getElementById('article');
-el.insertAdjacentHTML('beforeend','<header class="article__head"><div class="article__meta"><span class="chip">'+a.tag+'</span><span class="chip">'+a.minutos+' min de lectura</span></div><h1>'+a.titulo+'</h1><p class="lead">'+a.resumen+'</p></header><div class="article__cover '+a.color+'">'+(QN_ICONS[a.icono]||'')+'</div><div class="prose">'+a.cuerpo+'</div><div class="cta-box article__cta"><h2>¿Te gustaría hablar con un psicólogo?</h2><p>Escríbenos por WhatsApp y te ayudamos a elegir el servicio y el horario. Atendemos en Espinar, en Sicuani y en línea.</p><a class="btn btn--primary" href="index.html#locales">Pedir una cita</a></div>');
+el.insertAdjacentHTML('beforeend','<header class="article__head"><div class="article__meta"><span class="chip">'+a.tag+'</span><span class="chip">'+a.minutos+' min de lectura</span></div><h1>'+a.titulo+'</h1><p class="lead">'+a.resumen+'</p></header><div class="article__cover '+a.color+'">'+qnCover(a)+'</div><div class="prose">'+a.cuerpo+'</div><div class="cta-box article__cta"><h2>¿Te gustaría hablar con un psicólogo?</h2><p>Escríbenos por WhatsApp y te ayudamos a elegir el servicio y el horario. Atendemos en Espinar, en Sicuani y en línea.</p><a class="btn btn--primary" href="index.html#locales">Pedir una cita</a></div>');
 document.getElementById('posts').innerHTML=QN_ARTICULOS.filter(function(x){return x!==a;}).slice(0,3).map(card).join('');
 })();</script>
 <script src="main.js"></script>

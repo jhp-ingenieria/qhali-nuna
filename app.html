@@ -94,7 +94,7 @@
     var h = new Date().getHours();
     document.getElementById('hello').textContent = (h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches') + ', ¿cómo te sientes hoy?';
     document.getElementById('app-posts').innerHTML = (window.QN_ARTICULOS || []).slice(0, 3).map(function (a) {
-      return '<a class="card app-post" href="articulo.html?a=' + a.slug + '"><span class="' + a.color + '">' + (QN_ICONS[a.icono] || '') + '</span><span><b>' + a.titulo + '</b><br><small class="app-sub">' + a.minutos + ' min de lectura</small></span></a>';
+      return '<a class="card app-post" href="articulo.html?a=' + a.slug + '"><span class="' + a.color + '">' + qnCover(a) + '</span><span><b>' + a.titulo + '</b><br><small class="app-sub">' + a.minutos + ' min de lectura</small></span></a>';
     }).join('');
   })();
 </script>

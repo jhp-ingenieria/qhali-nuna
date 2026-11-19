@@ -100,7 +100,20 @@
   /* ---------- choose office sheet ---------- */
   const sheet = $('#sheet');
   if (sheet) {
-    const open = e => { e.preventDefault(); sheet.classList.add('is-open'); $('a', sheet).focus(); };
+    const links = $$('[data-wa]', sheet), sheetH = $('h2', sheet), sheetTitle = sheetH ? sheetH.textContent : '';
+    links.forEach(a => { a.dataset.waBase = a.dataset.waMsg || ''; });
+    const open = e => {
+      e.preventDefault();
+      const promo = e.currentTarget.dataset.promoMsg;
+      links.forEach(a => {
+        const online = a.dataset.waBase.includes('en línea');
+        const where = online ? 'en línea' : 'en ' + (a.dataset.wa === 'espinar' ? 'Espinar' : 'Sicuani');
+        const msg = promo ? 'Hola, vengo por la promoción "' + promo + '". Quisiera una cita ' + where + '.' : (a.dataset.waBase || undefined);
+        a.href = waUrl(a.dataset.wa, msg);
+      });
+      if (sheetH) sheetH.textContent = promo ? '¿A qué local quieres ir?' : sheetTitle;
+      sheet.classList.add('is-open'); $('a', sheet).focus();
+    };
     const close = () => sheet.classList.remove('is-open');
     $$('[data-choose]').forEach(b => b.addEventListener('click', open));
     sheet.addEventListener('click', e => { if (e.target === sheet || e.target.closest('[data-close]')) close(); });
