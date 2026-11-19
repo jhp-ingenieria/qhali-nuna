@@ -66,9 +66,9 @@
     <div class="wrap">
       <div class="cta-box reveal">
         <span class="cta-box__blob" aria-hidden="true"><svg viewBox="0 0 300 500" preserveAspectRatio="none"><path fill="currentColor" d="M300 0H175c-40 30-30 90 10 120-70 0-110 60-85 120 15 30 45 45 60 50-80 20-120 90-90 150 10 25 25 45 40 60h190z"/></svg></span>
-        <h2>Tu primera sesión es gratis</h2>
-        <p>Si tu resultado te deja dudas, conversa con uno de nuestros psicólogos. La primera sesión no tiene costo, en Espinar, en Sicuani o en línea.</p>
-        <a class="btn btn--primary" href="index.html#locales">Pedir mi sesión gratis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+        <h2>Habla con un psicólogo</h2>
+        <p>Si tu resultado te deja dudas, conversa con uno de nuestros psicólogos, en Espinar, en Sicuani o en línea.</p>
+        <a class="btn btn--primary" href="index.html#locales">Pedir una cita <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </section>
@@ -122,7 +122,7 @@
     ['¿Cómo funciona y cuánto tiempo toma?', 'Son ' + t.preguntas.length + ' preguntas. ' + t.consigna + ' Elige la respuesta que mejor te describa. Toma unos ' + min + ' minutos y ves tu resultado al terminar.'],
     ['¿El resultado es un diagnóstico?', 'No. Este test no tiene valor diagnóstico y no reemplaza la evaluación de un profesional. Te ayuda a tomar conciencia de cómo estás y a decidir si te conviene consultar.'],
     ['¿Se guardan mis respuestas?', 'No. El test funciona en tu celular o computadora: tus respuestas no se guardan ni se envían a nadie.'],
-    ['¿Qué puedo hacer si el resultado me preocupa?', 'Conversa con un psicólogo para entender tu resultado y ver si necesitas acompañamiento. En Qhali Nuna la primera sesión es gratis, en Espinar, en Sicuani o en línea.' + (art ? ' También puedes leer <a href="articulo.html?a=' + art.slug + '">' + art.titulo + '</a>.' : '')]
+    ['¿Qué puedo hacer si el resultado me preocupa?', 'Conversa con un psicólogo para entender tu resultado y ver si necesitas acompañamiento. En Qhali Nuna te atendemos en Espinar, en Sicuani o en línea.' + (art ? ' También puedes leer <a href="articulo.html?a=' + art.slug + '">' + art.titulo + '</a>.' : '')]
   ];
   var plus = '<span class="plus" aria-hidden="true"><svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 1v12M1 7h12"/></svg></span>';
   document.getElementById('t-faq').innerHTML = faqs.map(function(f){ return '<details><summary>' + f[0] + plus + '</summary><div class="answer"><p>' + f[1] + '</p></div></details>'; }).join('');
@@ -168,12 +168,12 @@
       '<p class="result-band ' + r[3] + '">' + r[2] + '</p>' +
       (risk ? '<div class="crisis" style="border-color:var(--pink)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.6-7 10-7 10z"/></svg><div><b>Gracias por tu sinceridad.</b>Contaste que has pensado en hacerte daño. No estás solo: habla hoy con alguien. Llama gratis a la <b style="display:inline">Línea 113, opción 5</b> (las 24 horas) o al <b style="display:inline">106</b> si estás en peligro. También puedes escribirnos.</div></div>' : '') +
       '<p class="disclaimer">Este resultado es una orientación y no un diagnóstico. Basado en: ' + t.instrumento + '.</p>' +
-      '<div class="cta-box" style="padding:28px;box-shadow:none"><h2 style="font-size:26px">Tu primera sesión es gratis</h2><p style="font-size:16px">Conversa con un psicólogo sobre tu resultado, en Espinar, en Sicuani o en línea.</p>' +
+      '<div class="cta-box" style="padding:28px;box-shadow:none"><h2 style="font-size:26px">Habla con un psicólogo</h2><p style="font-size:16px">Conversa con un psicólogo sobre tu resultado, en Espinar, en Sicuani o en línea.</p>' +
       '<div class="result-actions"><a class="btn btn--primary" data-wa="espinar" href="#">Escribir a Espinar</a><a class="btn btn--primary" data-wa="sicuani" href="#">Escribir a Sicuani</a></div></div>' +
       '<div class="result-actions"><button type="button" class="btn btn--light" data-again>Repetir el test</button><a class="btn btn--light" href="tests.html">Ver otros tests</a></div>' +
       '</div>';
     panel.querySelectorAll('[data-wa]').forEach(function(a){
-      a.href = window.qnWa(a.dataset.wa, 'Hola, hice el ' + t.titulo.replace(/^Test/, 'test') + (t.padres ? ' para mi hijo(a)' : '') + ' en su página y quisiera mi primera sesión gratis');
+      a.href = window.qnWa(a.dataset.wa, 'Hola, hice el ' + t.titulo.replace(/^Test/, 'test') + (t.padres ? ' para mi hijo(a)' : '') + ' en su página y quisiera pedir una cita');
       a.target = '_blank'; a.rel = 'noopener';
     });
     panel.querySelector('h3').focus({ preventScroll: true });

@@ -1,6 +1,6 @@
 /* Qhali Nuna: hace que la app se pueda instalar y abrir aunque la señal sea débil.
    Siempre intenta traer la versión más nueva de internet; si no hay conexión, usa la guardada. */
-const CACHE = 'qhali-nuna-v12';
+const CACHE = 'qhali-nuna-v13';
 const CORE = [
   './', 'index.html', 'app.html', 'tests.html', 'blog.html', 'articulo.html', 'test.html', 'sesion.html', 'tests-data.js',
   'styles.css', 'main.js', 'config.js', 'articulos.js', 'logo-qhali-nuna.jpg',

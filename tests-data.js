@@ -229,7 +229,7 @@
       ],
       maximo: 11,
       rangos: [
-        [2, 'Podemos acompañarte', 'Por lo que nos cuentas, no parece una urgencia. Igual puedes escribirnos para conversar o pedir tu primera sesión gratis.', 'ok'],
+        [2, 'Podemos acompañarte', 'Por lo que nos cuentas, no parece una urgencia. Igual puedes escribirnos para conversar o pedir una cita.', 'ok'],
         [5, 'Te recomendamos atención pronto', 'Estás pasando por un momento difícil. Escríbenos y buscamos juntos el horario más cercano para atenderte.', 'medio'],
         [11, 'Necesitas apoyo lo antes posible', 'Lo que estás viviendo es importante y no tienes que enfrentarlo solo(a). Escríbenos ahora y te atendemos lo antes posible.', 'alto']
       ],

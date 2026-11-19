@@ -9,7 +9,7 @@ window.QN = {
     sicuani: { numero: "51931914570", visible: "931 914 570" }
   },
 
-  // Precios. Hoy la primera sesión es gratis y las demás se definen en la consulta según el plan.
+  // Precios. Se definen en la consulta según el tipo de atención.
   // Si algún día quieres mostrar un precio, escríbelo en soles, por ejemplo "S/ 80".
   precios: {
     individual: "",
@@ -28,9 +28,21 @@ window.QN = {
   promociones: [
     {
       activa: true,
-      titulo: "Primera sesión",
-      etiqueta: "Gratis",
-      texto: "Conoce a tu psicólogo sin costo, en Espinar, en Sicuani o en línea"
+      titulo: "10% de descuento",
+      etiqueta: "10%",
+      texto: "Síguenos en Facebook, Instagram y TikTok y muéstralo al llegar a tu cita"
+    },
+    {
+      activa: true,
+      titulo: "Consultas al 50%",
+      etiqueta: "50%",
+      texto: "En tu cumpleaños, el aniversario del centro, el Día del Psicólogo Peruano o por convenio"
+    },
+    {
+      activa: true,
+      titulo: "Ayuda solidaria",
+      etiqueta: "Solidaria",
+      texto: "Si pasas un momento económico difícil, acordamos juntos un monto que puedas pagar"
     }
   ],
 
