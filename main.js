@@ -148,3 +148,9 @@
   const ok = ((window.QN || {}).psicologos || []).some(p => p.meet);
   if (!ok) document.querySelectorAll('[data-meet-link]').forEach(el => { el.hidden = true; el.style.display = 'none'; });
 })();
+
+/* enlaces a redes sociales (config.js → redes) */
+(() => {
+  const r = (window.QN || {}).redes || {};
+  document.querySelectorAll('[data-red]').forEach(a => { const u = r[a.dataset.red]; if (u) { a.href = u; a.target = '_blank'; a.rel = 'noopener'; } });
+})();

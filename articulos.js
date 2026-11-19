@@ -67,16 +67,15 @@ window.QN_ARTICULOS = [
     resumen: "Algunos cambios de conducta son parte de crecer y otros piden atención. Estas señales te pueden orientar.",
     cuerpo: `
 <p>Los niños y adolescentes no siempre saben poner en palabras lo que sienten. Muchas veces el malestar se nota en su <strong>conducta</strong>: cómo duermen, cómo juegan, cómo les va en el colegio o cómo se relacionan.</p>
-<h2>Señales que vale la pena observar</h2>
-<ul>
-<li>Cambios bruscos de humor, tristeza o irritabilidad que duran semanas.</li>
-<li>Problemas para dormir, pesadillas frecuentes o volver a mojar la cama.</li>
-<li>Bajada repentina en las notas o rechazo a ir al colegio.</li>
-<li>Aislarse de sus amigos o dejar de disfrutar lo que antes le gustaba.</li>
-<li>Rabietas o peleas muy frecuentes, más de lo esperable para su edad.</li>
-<li>Miedos intensos que le impiden hacer cosas cotidianas.</li>
-<li>En adolescentes: cambios en la alimentación, consumo de alcohol u otras sustancias, o hablar de no querer vivir.</li>
-</ul>
+<h2>Señales que observo en mi hijo</h2>
+<ol>
+<li>Tiene dificultades para controlar sus emociones.</li>
+<li>Le cuesta hablar con fluidez y omite palabras.</li>
+<li>Se distrae con facilidad en clases o cuando se le da una orden.</li>
+<li>En el salón de clases y en casa aprende con dificultad o necesita que le repitan las cosas.</li>
+<li>Se comporta diferente a los demás niños: no tiene interés en socializar, no juega con los juguetes o le fastidian los sonidos.</li>
+</ol>
+<p>Si reconoces alguna de estas señales, puedes hacer nuestros tests de <a href="test.html?t=autismo">autismo</a>, <a href="test.html?t=tdah">TDAH</a> o <a href="test.html?t=estimulacion-temprana">estimulación temprana</a> para orientarte.</p>
 <h2>Momentos que pueden afectarles</h2>
 <p>Una separación de los padres, una mudanza, el nacimiento de un hermano, la muerte de un familiar, el acoso escolar o un cambio de colegio son situaciones que pueden necesitar acompañamiento, aunque el niño parezca estar bien.</p>
 <h2>¿Cómo es la terapia para niños?</h2>

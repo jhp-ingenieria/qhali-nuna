@@ -18,6 +18,10 @@ window.QN = {
     evaluacion: ""
   },
 
+  // Redes sociales del centro. Pega aquí el enlace de cada una (por ejemplo "https://www.facebook.com/...").
+  // Mientras esté vacío, el nombre de la red se muestra sin enlace.
+  redes: { facebook: "", instagram: "", tiktok: "" },
+
   // Promociones. Cada una aparece en la barra de arriba, en la tarjeta de promoción
   // y en la app. Pon "activa: false" para ocultarla.
   // IMPORTANTE: escribe solo promociones reales que el centro vaya a cumplir.
