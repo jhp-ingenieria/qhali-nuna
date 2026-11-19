@@ -20,7 +20,7 @@ window.QN = {
 
   // Redes sociales del centro. Pega aquí el enlace de cada una (por ejemplo "https://www.facebook.com/...").
   // Mientras esté vacío, el nombre de la red se muestra sin enlace.
-  redes: { facebook: "", instagram: "", tiktok: "" },
+  redes: { facebook: "https://www.facebook.com/share/1CVjFEjWcK/", instagram: "https://www.instagram.com/qhali_nuna_/", tiktok: "https://www.tiktok.com/@qhali.nuna2024" },
 
   // Promociones. Cada una aparece en la barra de arriba, en la tarjeta de promoción
   // y en la app. Pon "activa: false" para ocultarla.
