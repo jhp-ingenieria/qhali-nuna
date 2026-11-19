@@ -705,3 +705,16 @@ p { margin: 0; }
   .promo__big small, .promo__big--word small { margin: 0; font-size: 14px; }
   .promo__big--word { font-size: 24px; }
 }
+
+/* galería del local */
+.local-gallery { margin-top: 56px; }
+.local-gallery h3 { font-size: clamp(24px, 2.4vw, 32px); margin: 0 0 20px; }
+.local-gallery__grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.local-gallery figure { margin: 0; position: relative; aspect-ratio: 3 / 4; border-radius: var(--r-lg); overflow: hidden; border: 1.5px solid var(--line); box-shadow: var(--shadow); background: var(--cream-2); }
+.local-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.local-gallery figure:hover img { transform: scale(1.04); }
+.local-gallery figcaption { position: absolute; left: 12px; bottom: 12px; background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: 4px 12px; font-weight: 600; font-size: 14px; }
+@media (max-width: 680px) {
+  .local-gallery__grid { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 78%; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 8px; }
+  .local-gallery figure { scroll-snap-align: start; }
+}
